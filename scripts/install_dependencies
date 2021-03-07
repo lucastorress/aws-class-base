@@ -1,0 +1,10 @@
+#!/bin/bash
+apt-get update -y
+
+cd /home/ubuntu/api
+rm -rf node_modules
+yarn
+
+pm2 save
+npm install pm2@latest -g
+pm2 update
